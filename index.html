@@ -1,23 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Utkrista Bhandary | Elite Developer Portfolio</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-  <!-- Custom Cursor -->
+
+  <!-- Cursor -->
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
 
-  <!-- Particle Canvas -->
+  <!-- Background -->
   <canvas id="particles-canvas"></canvas>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">UTKRISTA</div>
+
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -25,40 +33,48 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section id="home" class="hero fade-in">
     <div class="hero-content">
-      <div class="typewriter" id="typewriter">
-        <span>Student Developer</span>
-      </div>
-      <p class="subheadline">Crafting pixel-perfect digital experiences with cutting-edge tech & data insights</p>
+      <div class="typewriter" id="typewriter"></div>
+
+      <p class="subheadline">
+        Crafting pixel-perfect digital experiences with cutting-edge tech & data insights
+      </p>
+
       <div class="cta-buttons">
         <a href="#projects" class="btn btn-primary">Explore Work</a>
         <a href="#contact" class="btn btn-secondary">Let's Talk</a>
       </div>
     </div>
+
     <div class="hero-image">
-      <img src="myphoto.jpeg" alt="Utkrista Bhandary" class="profile-img">
+      <img src="myphoto.jpeg" alt="Utkrista" class="profile-img">
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about" class="container fade-in">
     <h2 class="section-title">About Me</h2>
-    <div style="max-width: 900px; margin: 0 auto; text-align: center; font-size: 1.3rem; line-height: 1.8;">
-      <p>Elite student developer & data analyst from Kathmandu 🇳🇵. I create stunning web applications, design intuitive UIs, and transform raw data into actionable insights using Power BI.</p>
-    </div>
-    
-    <!-- Stats -->
+
+    <p style="text-align:center; max-width:800px; margin:auto; line-height:1.8;">
+      Elite student developer & data analyst from Kathmandu 🇳🇵. I create stunning web applications, design intuitive UIs, and transform raw data into actionable insights using Power BI.
+    </p>
+
     <div class="stats">
       <div class="stat-item">
-        <h3 id="projects-count">6</h3>
+        <h3>6+</h3>
         <div class="stat-label">Projects</div>
       </div>
       <div class="stat-item">
-        <h3 id="skills-count">10</h3>
+        <h3>10+</h3>
         <div class="stat-label">Skills</div>
       </div>
       <div class="stat-item">
@@ -68,107 +84,116 @@
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- SKILLS -->
   <section id="skills" class="container">
     <h2 class="section-title">Skills Mastery</h2>
+
     <div class="skills-grid">
+
       <div class="skill-card fade-in">
         <i class="fab fa-python skill-icon"></i>
         <div class="skill-name">Python</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+        <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
       </div>
+
       <div class="skill-card fade-in">
-        <i class="fas fa-chart-line skill-icon" style="color: #f28c38;"></i>
+        <i class="fas fa-chart-line skill-icon"></i>
         <div class="skill-name">Power BI</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="60%"></div></div>
+        <div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div>
       </div>
+
       <div class="skill-card fade-in">
-        <i class="fas fa-magic skill-icon" style="color: #ffd700;"></i>
+        <i class="fab fa-html5 skill-icon"></i>
         <div class="skill-name">Prompt Engineering</div>
         <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
       </div>
+
       <div class="skill-card fade-in">
-        <i class="fas fa-paint-brush skill-icon" style="color: #ff6b6b;"></i>
+        <i class="fas fa-paint-brush skill-icon"></i>
         <div class="skill-name">UI/UX Design</div>
         <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
       </div>
-      <div class="skill-card fade-in">
-        <i class="fas fa-brain skill-icon" style="color: #8b5cf6;"></i>
-        <div class="skill-name">Design Thinking</div>
+      
+       <div class="skill-card fade-in">
+        <i class="fas fa-paint-brush skill-icon"></i>
+        <div class="skill-name"> Design thinking </div>
         <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
       </div>
-      <div class="skill-card fade-in">
-        <i class="fas fa-server skill-icon" style="color: #10b981;"></i>
+
+       <div class="skill-card fade-in">
+        <i class="fas fa-paint-brush skill-icon"></i>
         <div class="skill-name">Database</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+        <div class="skill-bar"><div class="skill-progress" data-width="50%"></div></div>
       </div>
+
       <div class="skill-card fade-in">
-        <i class="fas fa-network-wired skill-icon" style="color: #3b82f6;"></i>
+        <i class="fas fa-paint-brush skill-icon"></i>
         <div class="skill-name">Networking</div>
         <div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- Projects - ALL 6 PROJECTS -->
+  <!-- PROJECTS -->
   <section id="projects" class="container">
-    <h2 class="section-title">Featured Projects</h2>
+    <h2 class="section-title">Projects</h2>
+
     <div class="projects-grid">
-      
-      <!-- Project 1 -->
+
       <div class="project-card fade-in">
         <div class="project-inner">
+
           <div class="project-front">
-            <i class="fas fa-users" style="font-size: 4rem; color: #667eea; margin-bottom: 1rem;"></i>
-            <h3 class="project-title">Candidate Screening Platform</h3>
-            <p class="project-desc">AI-powered candidate-job matching</p>
+            <i class="fas fa-users"></i>
+            <h3>Candidate Screening Platform</h3>
+            <p>AI-powered hiring system</p>
           </div>
+
           <div class="project-back">
             <h3>Candidate Screening Platform</h3>
             <p>Full-stack web app to automate candidate-job matching and evaluation. Developed recruiter-friendly dashboard with advanced filtering and analytics.</p>
             <div class="tech-stack">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">HTML/CSS/JS</span>
+              <span class="tech-tag" >HTML/CSS/JS</span>
               <span class="tech-tag">Flask</span>
             </div>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-              <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
-            </div>
+            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
           </div>
+
         </div>
       </div>
 
-      <!-- Project 2 -->
       <div class="project-card fade-in">
         <div class="project-inner">
+
           <div class="project-front">
-            <i class="fas fa-gamepad" style="font-size: 4rem; color: #f093fb; margin-bottom: 1rem;"></i>
-            <h3 class="project-title">Game Studio Manager</h3>
-            <p class="project-desc">Multi-role team management system</p>
+            <i class="fas fa-gamepad"></i>
+            <h3>Game Manager</h3>
+            <p>Multi-role team management system</p>
           </div>
+
           <div class="project-back">
-            <h3>Game Studio Management System</h3>
+            <h3>Game Studio Manager(made using -ai )</h3>
             <p>Web app with three user roles (Admin, Developer, Viewer) to track projects, manage teams, and enhance collaboration workflows.</p>
             <div class="tech-stack">
-              <span class="tech-tag">HTML/CSS/JS</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Backend</span>
+              <span class="tech-tag">node.js</span>
+              <span class="tech-tag">react</span>
+              <span class="tech-tag">express</span>
             </div>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-              <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
-            </div>
+            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
           </div>
+
         </div>
       </div>
-
-      <!-- Project 3 -->
       <div class="project-card fade-in">
         <div class="project-inner">
+
           <div class="project-front">
-            <i class="fas fa-paint-brush" style="font-size: 4rem; color: #f28c38; margin-bottom: 1rem;"></i>
-            <h3 class="project-title">UI/UX Design Project</h3>
-            <p class="project-desc">Modern Figma interface design</p>
+            <i class="fas fa-gamepad"></i>
+            <h3>UI/UX Design Project</h3>
+            <p>Modern Figma interface desig</p>
           </div>
+
           <div class="project-back">
             <h3>Website UI/UX Design Project</h3>
             <p>Figma-based modern interface design featuring comprehensive wireframes, interactive prototypes, and design system documentation.</p>
@@ -176,44 +201,44 @@
               <span class="tech-tag">Figma</span>
               <span class="tech-tag">UI/UX</span>
             </div>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-              <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
-            </div>
+            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
           </div>
+
         </div>
       </div>
-
-      <!-- Project 4 -->
+      
       <div class="project-card fade-in">
         <div class="project-inner">
+
           <div class="project-front">
-            <i class="fas fa-chalkboard-teacher" style="font-size: 4rem; color: #8b5cf6; margin-bottom: 1rem;"></i>
-            <h3 class="project-title">Classroom Manager</h3>
-            <p class="project-desc">Student attendance & management</p>
+            <i class="fas fa-gamepad"></i>
+            <h3>Classroom Manager</h3>
+            <p>Student attendance & management</p>
           </div>
+
           <div class="project-back">
             <h3>Classroom Management System</h3>
             <p>Comprehensive web application for managing student attendance, class schedules, grades, and classroom activities with teacher/admin dashboards.</p>
             <div class="tech-stack">
+               <span class="tech-tag">Python</span>
               <span class="tech-tag">HTML/CSS/JS</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Dashboard</span>
+              <span class="tech-tag">Flask</span>
             </div>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-              <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
-            </div>
+            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
           </div>
+
         </div>
       </div>
 
-      <!-- Project 5 - Portfolio -->
       <div class="project-card fade-in">
         <div class="project-inner">
+
           <div class="project-front">
-            <i class="fas fa-laptop-code" style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;"></i>
-            <h3 class="project-title">Personal Portfolio</h3>
-            <p class="project-desc">This website you're viewing</p>
+            <i class="fas fa-gamepad"></i>
+            <h3>Personal Portfolio</h3>
+            <p>This website you're viewing</p>
           </div>
+
           <div class="project-back">
             <h3>Personal Portfolio Website</h3>
             <p>Ultra-modern responsive portfolio built with advanced CSS animations, 3D transforms, particle systems, and pixel-perfect responsive design across all devices.</p>
@@ -223,42 +248,45 @@
               <span class="tech-tag">3D Animations</span>
               <span class="tech-tag">Responsive</span>
             </div>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-              <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
-            </div>
+            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-secondary">GitHub</a>
           </div>
+
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact" class="container">
     <h2 class="section-title">Let's Create Something Amazing</h2>
-    <form class="contact-form fade-in">
-      <div class="form-group">
-        <input type="text" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <textarea rows="6" placeholder="Tell me about your next big project... Web dev? Data analysis? UI/UX?" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.2rem;">Launch Collaboration 🚀</button>
+
+    <!-- Replace YOUR_ID -->
+    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form fade-in">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+
+      <button type="submit" class="btn btn-primary">
+        Send Message 🚀
+      </button>
     </form>
 
-    <div style="text-align: center; margin-top: 3rem; color: rgba(255,255,255,0.7);">
+    <div style="text-align:center; margin-top:30px;">
       <p><i class="fas fa-envelope"></i> utkristabhandary@gmail.com</p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/utkristabhandary-cyber" target="_blank" style="color: #667eea;">github.com/utkristabhandary-cyber</a></p>
+      <p><i class="fab fa-github"></i> github.com/utkristabhandary-cyber</p>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Utkrista Bhandary — Built with bleeding-edge tech ✨ Kathmandu, Nepal</p>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
