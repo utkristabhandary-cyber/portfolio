@@ -1,292 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utkrista Bhandary | Elite Developer Portfolio</title>
-
-  <!-- CSS -->
+  <title>Utkrista Portfolio</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-  <!-- Cursor -->
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
-
-  <!-- Background -->
-  <canvas id="particles-canvas"></canvas>
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow"></div>
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="logo">UTKRISTA</div>
-
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <!-- Dark Mode Toggle -->
-    <div class="theme-toggle" id="themeToggle">
-      <i class="fas fa-moon"></i>
-    </div>
+    <a href="#about">about</a>
+    <a href="#projects">projects</a>
+    <a href="#skills">skills</a>
+    <a href="#contact">contact</a>
   </nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero fade-in">
-    <div class="hero-content">
-      <div class="typewriter" id="typewriter"></div>
-
-      <p class="subheadline">
-        Crafting pixel-perfect digital experiences with cutting-edge tech & data insights
-      </p>
-
-      <div class="cta-buttons">
-        <a href="#projects" class="btn btn-primary">Explore Work</a>
-        <a href="#contact" class="btn btn-primary">Let's Talk</a>
+  <!-- HERO SECTION -->
+  <section class="hero section">
+    <div class="hero-text fade-in">
+      <h1>STUDENT DEVELOPER<br><span>DATA ANALYST</span><br>UI/UX DESIGNER</h1>
+      <p>Creating pixel-perfect digital experiences with cutting-edge tech & insigts</p>
+      <div class="buttons">
+        <button class="magnetic-btn primary-btn">Explore Work</button>
+        <button class="magnetic-btn secondary-btn">Contact Me</button>
       </div>
     </div>
-
-    <div class="hero-image">
-      <img src="myphoto.jpeg" alt="Utkrista" class="profile-img">
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="container fade-in">
-    <h2 class="section-title">About Me</h2>
-
-    <p style="text-align:center; max-width:800px; margin:auto; line-height:1.8;">
-      Elite student developer & data analyst from Kathmandu 🇳🇵. I create stunning web applications, design intuitive UIs, and transform raw data into actionable insights using Power BI.
-    </p>
-
-    <div class="stats">
-      <div class="stat-item">
-        <h3>6+</h3>
-        <div class="stat-label">Projects</div>
-      </div>
-      <div class="stat-item">
-        <h3>10+</h3>
-        <div class="stat-label">Skills</div>
-      </div>
-      <div class="stat-item">
-        <h3>100%</h3>
-        <div class="stat-label">Passion</div>
+    <div class="hero-image fade-in">
+      <div class="image-wrapper">
+        <img src="myphoto.png" alt="Utkrista">
+        <div class="glow-frame"></div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="container">
-    <h2 class="section-title">Skills Mastery</h2>
-
-    <div class="skills-grid">
-
-      <div class="skill-card fade-in">
-        <i class="fab fa-python skill-icon"></i>
-        <div class="skill-name">Python</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section fade-in">
+    <div class="about-grid">
+      <div>
+        <h2>Who am I?</h2>
+        <p>Elite student developer & data analyst from Kathmandu,Nepal. I create stunning web applications,design intutive UIs, and transform raw data into actionable insigts using power BI</p>
       </div>
-
-      <div class="skill-card fade-in">
-        <i class="fas fa-chart-line skill-icon"></i>
-        <div class="skill-name">Power BI</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div>
-      </div>
-
-      <div class="skill-card fade-in">
-        <i class="fab fa-html5 skill-icon"></i>
-        <div class="skill-name">Prompt Engineering</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
-      </div>
-
-      <div class="skill-card fade-in">
-        <i class="fas fa-paint-brush skill-icon"></i>
-        <div class="skill-name">UI/UX Design</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
-      </div>
-      
-       <div class="skill-card fade-in">
-        <i class="fas fa-paint-brush skill-icon"></i>
-        <div class="skill-name"> Design thinking </div>
-        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
-      </div>
-
-       <div class="skill-card fade-in">
-        <i class="fas fa-paint-brush skill-icon"></i>
-        <div class="skill-name">Database</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="50%"></div></div>
-      </div>
-
-      <div class="skill-card fade-in">
-        <i class="fas fa-paint-brush skill-icon"></i>
-        <div class="skill-name">Networking</div>
-        <div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div>
+      <div class="tech-list">
+        <h2>Tech Stack :</h2>
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>SQL</span>
+        <span>Tailwind</span>
+        <span>Git</span>
+        <span>Figma</span>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="container">
-    <h2 class="section-title">Projects</h2>
-
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
     <div class="projects-grid">
-
-      <div class="project-card fade-in">
-        <div class="project-inner">
-
-          <div class="project-front">
-            <i class="fas fa-users"></i>
-            <h3>Candidate Screening Platform</h3>
-            <p>AI-powered hiring system</p>
-          </div>
-
-          <div class="project-back">
-            <h3>Candidate Screening Platform</h3>
-            <p>Full-stack web app to automate candidate-job matching and evaluation. Developed recruiter-friendly dashboard with advanced filtering and analytics.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag" >HTML/CSS/JS</span>
-              <span class="tech-tag">Flask</span>
-            </div>
-            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-primary">GitHub</a>
-          </div>
-
-        </div>
+      <div class="elite-card fade-in">
+        <div class="project-preview">Preview</div>
+        <h3>Candidate Screening Platform</h3>
+        <div>Full-stack web app to automate candidate-job matching and evaluation. Developed recruiter-friendly dashboard with advanced filtering and analytics.</div>        <div class="project-tech"><span>Python</span><span>JavaScript</span></div>
       </div>
-
-      <div class="project-card fade-in">
-        <div class="project-inner">
-
-          <div class="project-front">
-            <i class="fas fa-gamepad"></i>
-            <h3>Game Manager</h3>
-            <p>Multi-role team management system</p>
-          </div>
-
-          <div class="project-back">
-            <h3>Game Studio Manager(made using -ai )</h3>
-            <p>Web app with three user roles (Admin, Developer, Viewer) to track projects, manage teams, and enhance collaboration workflows.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">node.js</span>
-              <span class="tech-tag">react</span>
-              <span class="tech-tag">express</span>
-            </div>
-            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-primary">GitHub</a>
-          </div>
-
-        </div>
+      <div class="elite-card fade-in">
+        <div class="project-preview">Preview</div>
+        <h3>Game Studio System</h3>
+        <p>Role-based collaboration platform<BR>Web app with three user roles (Admin, Developer, Viewer) to track projects, manage teams, and enhance collaboration workflows.</p>
+        <div class="project-tech"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
       </div>
-      <div class="project-card fade-in">
-        <div class="project-inner">
-
-          <div class="project-front">
-            <i class="fas fa-gamepad"></i>
-            <h3>UI/UX Design Project</h3>
-            <p>Modern Figma interface desig</p>
-          </div>
-
-          <div class="project-back">
-            <h3>Website UI/UX Design Project</h3>
-            <p>Figma-based modern interface design featuring comprehensive wireframes, interactive prototypes, and design system documentation.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Figma</span>
-              <span class="tech-tag">UI/UX</span>
-            </div>
-            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-primary">GitHub</a>
-          </div>
-
-        </div>
+      <div class="elite-card fade-in">
+        <div class="project-preview">Preview</div>
+        <h3>UI/UX Portfolio</h3>
+        <p>Modern design systems & interfaces</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>Figma</span></div>
       </div>
-      
-      <div class="project-card fade-in">
-        <div class="project-inner">
-
-          <div class="project-front">
-            <i class="fas fa-gamepad"></i>
-            <h3>Classroom Manager</h3>
-            <p>Student attendance & management</p>
-          </div>
-
-          <div class="project-back">
-            <h3>Classroom Management System</h3>
-            <p>Comprehensive web application for managing student attendance, class schedules, grades, and classroom activities with teacher/admin dashboards.</p>
-            <div class="tech-stack">
-               <span class="tech-tag">Python</span>
-              <span class="tech-tag">HTML/CSS/JS</span>
-              <span class="tech-tag">Flask</span>
-            </div>
-            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-primary">GitHub</a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-inner">
-
-          <div class="project-front">
-            <i class="fas fa-gamepad"></i>
-            <h3>Personal Portfolio</h3>
-            <p>This website you're viewing</p>
-          </div>
-
-          <div class="project-back">
-            <h3>Personal Portfolio Website</h3>
-            <p>Ultra-modern responsive portfolio built with advanced CSS animations, 3D transforms, particle systems, and pixel-perfect responsive design across all devices.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">HTML/CSS/JS</span>
-              <span class="tech-tag">Particles</span>
-              <span class="tech-tag">3D Animations</span>
-              <span class="tech-tag">Responsive</span>
-            </div>
-            <a href="https://github.com/utkristabhandary-cyber" class="btn btn-primary">GitHub</a>
-          </div>
-
-        </div>
-      </div>
+      <div class="elite-card fade-in">
+        <div class="project-preview">Preview</div>
+        <h3>Classroom Management System</h3>
+        <div>Comprehensive web application for managing student attendance, class schedules, grades, and classroom activities with teacher/admin dashboards.</div>      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="container">
-    <h2 class="section-title">Let's Create Something Amazing</h2>
-
-    <!-- Replace YOUR_ID -->
-    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form fade-in">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-
-      <input type="email" name="email" placeholder="Your Email" required>
-
-      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-
-      <button type="submit" class="btn btn-primary">
-        Send Message 🚀
-      </button>
-    </form>
-
-    <div style="text-align:center; margin-top:30px;">
-      <p><i class="fas fa-envelope"></i> utkristabhandary@gmail.com</p>
-      <p><i class="fab fa-github"></i> github.com/utkristabhandary-cyber</p>
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="elite-card">Python</div>
+      <div class="elite-card">JavaScript</div>
+      <div class="elite-card">SQL</div>
+      <div class="elite-card">HTML</div>
+      <div class="elite-card">CSS</div>
+      <div class="elite-card">Tailwind</div>
+      <div class="elite-card">Git</div>
+      <div class="elite-card">Figma</div>
     </div>
   </section>
+
+ <!-- CONTACT SECTION -->
+<section id="contact" class="section fade-in">
+  <h2>Let’s build something great.</h2>
+  <p>E-mail: utkristabhandary@gmail.com</p>
+  <p>Phone: 9860905119</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/utkrista-bhandary/">linkedin.com/in/utkrista-bhandary</a></p>
+  <p>GitHub: <a href="https://github.com/utkristabhandary-cyber">github.com/utkristabhandary-cyber</a></p>
+
+  <h3>Send me a message</h3>
+  <form id="contact-form" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="magnetic-btn primary-btn">Send Message</button>
+    <p class="form-status" style="display:none;"></p>
+  </form>
+</section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Utkrista Bhandary — Built with bleeding-edge tech ✨ Kathmandu, Nepal</p>
+    © 2026 Utkrista Bhandary
   </footer>
-
-  <!-- JS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
