@@ -1,166 +1,88 @@
+// -------------------------
+// CURSOR GLOW
+// -------------------------
+const cursorGlow = document.querySelector(".cursor-glow");
 
-
-/* =========================
-   DARK MODE TOGGLE
-========================= */
-const toggle = document.getElementById("themeToggle");
-
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
+document.addEventListener("mousemove", (e) => {
+  cursorGlow.style.left = `${e.clientX}px`;
+  cursorGlow.style.top = `${e.clientY}px`;
 });
 
-/* Load saved theme */
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
-}
+// -------------------------
+// MAGNETIC BUTTON EFFECT
+// -------------------------
+const magneticButtons = document.querySelectorAll(".magnetic-btn");
 
-/* =========================
-   FADE-IN ON SCROLL
-========================= */
+magneticButtons.forEach((btn) => {
+  btn.addEventListener("mousemove", (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - (rect.left + rect.width / 2);
+    const y = e.clientY - (rect.top + rect.height / 2);
+    btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px) scale(1.05)`;
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.style.transform = `translate(0, 0) scale(1)`;
+  });
+});
+
+// -------------------------
+// SIMPLE FADE-IN ANIMATIONS
+// -------------------------
 const fadeElements = document.querySelectorAll(".fade-in");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.2
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+fadeElements.forEach((el) => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(40px)";
+  el.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+  observer.observe(el);
 });
 
-fadeElements.forEach(el => observer.observe(el));
+// -------------------------
+// EMAILJS CONTACT FORM INTEGRATION
+// -------------------------
+(function(){
+    emailjs.init("D18KwVASsg6oJxH9m"); // Your EmailJS Public Key
+})();
 
-/* =========================
-   SKILL BAR ANIMATION
-========================= */
-const skillBars = document.querySelectorAll(".skill-progress");
+const form = document.getElementById('contact-form');
 
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const width = entry.target.getAttribute("data-width");
-      entry.target.style.width = width;
-    }
-  });
-}, {
-  threshold: 0.3
+// create form status element if it doesn't exist
+let formStatus = document.querySelector('.form-status');
+if(!formStatus) {
+    formStatus = document.createElement('p');
+    formStatus.classList.add('form-status');
+    form.appendChild(formStatus);
+}
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    formStatus.style.display = "block";
+    formStatus.classList.remove('success', 'error');
+    formStatus.textContent = "Sending message...";
+
+    // Use EmailJS sendForm with your service and template IDs
+    emailjs.sendForm('service_0iauh6o', 'template_vpmfun8', this)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            formStatus.classList.add('success');
+            formStatus.textContent = "Message sent! You will receive an auto-reply.";
+            form.reset();
+        }, (err) => {
+            console.error('FAILED...', err);
+            formStatus.classList.add('error');
+            formStatus.textContent = "Oops! Something went wrong. Try again.";
+        });
 });
-
-skillBars.forEach(bar => skillObserver.observe(bar));
-
-/* =========================
-   TYPEWRITER EFFECT
-========================= */
-const typewriterText = "Student Developer | Data Analyst | UI/UX Designer";
-const typewriterEl = document.getElementById("typewriter");
-
-let i = 0;
-
-function typeEffect() {
-  if (i < typewriterText.length) {
-    typewriterEl.innerHTML = typewriterText.substring(0, i) + "|";
-    i++;
-    setTimeout(typeEffect, 50);
-  } else {
-    typewriterEl.innerHTML = typewriterText;
-  }
-}
-
-typeEffect();
-
-/* =========================
-   PARTICLE BACKGROUND
-========================= */
-const canvas = document.getElementById("particles-canvas");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particlesArray = [];
-
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.speedX = Math.random() * 0.5 - 0.25;
-    this.speedY = Math.random() * 0.5 - 0.25;
-  }
-
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-
-    if (this.x > canvas.width) this.x = 0;
-    if (this.x < 0) this.x = canvas.width;
-    if (this.y > canvas.height) this.y = 0;
-    if (this.y < 0) this.y = canvas.height;
-  }
-
-  draw() {
-    ctx.fillStyle = "#10b981";
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
-
-function initParticles() {
-  particlesArray = [];
-  for (let i = 0; i < 80; i++) {
-    particlesArray.push(new Particle());
-  }
-}
-
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  particlesArray.forEach(p => {
-    p.update();
-    p.draw();
-  });
-
-  requestAnimationFrame(animateParticles);
-}
-
-initParticles();
-animateParticles();
-
-/* Resize canvas */
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  initParticles();
-});
-
-/* =========================
-   NAVBAR SCROLL EFFECT
-========================= */
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".navbar");
-
-  if (window.scrollY > 50) {
-    nav.style.boxShadow = "0 5px 20px rgba(0,0,0,0.1)";
-  } else {
-    nav.style.boxShadow = "none";
-  }
-});
-
-/* =========================
-   CONTACT FORM UX
-========================= */
-const form = document.querySelector(".contact-form");
-
-if (form) {
-  form.addEventListener("submit", () => {
-    alert("🚀 Message sent successfully!");
-  });
-}
